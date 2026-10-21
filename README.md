@@ -5,6 +5,7 @@ A free perfume and fragrance API from [Scento](https://www.scento.com), built on
 Every answer is a small JSON "folio": a quotable one-sentence `lede`, a `detail` object, the `scento_page` to read on, `further_reading` links and a `cite` line. The same twelve answers are available as plain REST and as an [MCP](https://modelcontextprotocol.io) server for Claude, ChatGPT, Cursor and any other MCP client.
 
 - Developer page: https://www.scento.com/developers
+- Available in [Claude's connectors directory](https://claude.ai/directory/scento-perfume-compendium)
 - REST base URL: `https://www.scento.com/api/perfume/v1`
 - OpenAPI 3.1: https://www.scento.com/openapi.json (also at `/api/perfume/v1/openapi.json`; the earlier base `/api/compendium/v1` keeps working)
 - MCP endpoint: `https://www.scento.com/mcp` (streamable HTTP, no auth)
