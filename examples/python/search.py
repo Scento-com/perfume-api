@@ -1,6 +1,6 @@
 """Search perfumes, houses and raw materials.  Usage: python search.py oud"""
 import sys
-from compendium import get
+from perfume_api import get
 
 q = sys.argv[1] if len(sys.argv) > 1 else "oud"
 answer = get("search", q=q)

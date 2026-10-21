@@ -1,5 +1,5 @@
 // Tiny helper shared by the JavaScript examples (Node 18+, built-in fetch, no dependencies).
-export const BASE = "https://www.scento.com/api/compendium/v1";
+export const BASE = "https://www.scento.com/api/perfume/v1";
 
 export async function get(path, params = {}) {
   const url = new URL(`${BASE}/${path}`);

@@ -1,7 +1,7 @@
 """Compare perfumes side by side.
 Usage: python contrast.py aventus-creed baccarat-rouge-540-maison-francis-kurkdjian"""
 import sys
-from compendium import get
+from perfume_api import get
 
 slugs = sys.argv[1:] or ["aventus-creed", "baccarat-rouge-540-maison-francis-kurkdjian"]
 answer = get("contrast", perfumes=",".join(slugs))

@@ -1,5 +1,5 @@
 // Portrait of one perfume.  Usage: node portrait.mjs aventus-creed
-import { get, show } from "./compendium.mjs";
+import { get, show } from "./perfume-api.mjs";
 
 const answer = await get(`perfumes/${process.argv[2] ?? "aventus-creed"}`);
 show(answer);

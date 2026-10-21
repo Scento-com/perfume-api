@@ -5,8 +5,8 @@ A free perfume and fragrance API from [Scento](https://www.scento.com): 700+ des
 Every answer is a small JSON "folio": a quotable one-sentence `lede`, a `detail` object, the `scento_page` to read on, `further_reading` links and a `cite` line. The same twelve answers are available as plain REST and as an [MCP](https://modelcontextprotocol.io) server for Claude, ChatGPT, Cursor and any other MCP client.
 
 - Developer page: https://www.scento.com/developers
-- REST base URL: `https://www.scento.com/api/compendium/v1`
-- OpenAPI 3.1: https://www.scento.com/openapi.json (also at `/api/compendium/v1/openapi.json`)
+- REST base URL: `https://www.scento.com/api/perfume/v1`
+- OpenAPI 3.1: https://www.scento.com/openapi.json (also at `/api/perfume/v1/openapi.json`)
 - MCP endpoint: `https://www.scento.com/mcp` (streamable HTTP, no auth)
 - Server card: https://www.scento.com/.well-known/mcp.json
 - Official MCP Registry name: `com.scento/perfume-compendium`
@@ -20,9 +20,9 @@ Every perfume and raw-material entry is traced to a saved official house or auth
 ### curl
 
 ```sh
-curl -s "https://www.scento.com/api/compendium/v1/search?q=oud"
-curl -s "https://www.scento.com/api/compendium/v1/perfumes/aventus-creed"
-curl -s "https://www.scento.com/api/compendium/v1/materials/bergamot"
+curl -s "https://www.scento.com/api/perfume/v1/search?q=oud"
+curl -s "https://www.scento.com/api/perfume/v1/perfumes/aventus-creed"
+curl -s "https://www.scento.com/api/perfume/v1/materials/bergamot"
 ```
 
 ### Python (requests)
@@ -30,7 +30,7 @@ curl -s "https://www.scento.com/api/compendium/v1/materials/bergamot"
 ```python
 import requests
 
-r = requests.get("https://www.scento.com/api/compendium/v1/perfumes/aventus-creed", timeout=20)
+r = requests.get("https://www.scento.com/api/perfume/v1/perfumes/aventus-creed", timeout=20)
 r.raise_for_status()
 answer = r.json()
 print(answer["lede"])
@@ -41,7 +41,7 @@ print(answer["scento_page"]["url"])
 ### JavaScript (fetch, Node 18+ or the browser)
 
 ```js
-const res = await fetch("https://www.scento.com/api/compendium/v1/perfumes/aventus-creed");
+const res = await fetch("https://www.scento.com/api/perfume/v1/perfumes/aventus-creed");
 const answer = await res.json();
 console.log(answer.lede, answer.detail.pyramid, answer.scento_page.url);
 ```
@@ -69,7 +69,7 @@ The twelve tools are read-only: `compendium-search`, `perfume-portrait`, `scent-
 
 ## Endpoints
 
-All are `GET` under `https://www.scento.com/api/compendium/v1`. Every endpoint takes an optional `lang`; list endpoints return an opaque `continuation` value to fetch the next part.
+All are `GET` under `https://www.scento.com/api/perfume/v1`. Every endpoint takes an optional `lang`; list endpoints return an opaque `continuation` value to fetch the next part.
 
 | Endpoint | Parameters | Returns | MCP tool |
 |---|---|---|---|

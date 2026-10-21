@@ -1,7 +1,7 @@
 """Tiny helper shared by the Python examples: GET one Scento Perfume API endpoint."""
 import requests
 
-BASE = "https://www.scento.com/api/compendium/v1"
+BASE = "https://www.scento.com/api/perfume/v1"
 
 
 def get(path, **params):

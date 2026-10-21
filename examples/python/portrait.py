@@ -1,6 +1,6 @@
 """Portrait of one perfume.  Usage: python portrait.py aventus-creed"""
 import sys
-from compendium import get, show
+from perfume_api import get, show
 
 slug = sys.argv[1] if len(sys.argv) > 1 else "aventus-creed"
 answer = get(f"perfumes/{slug}")

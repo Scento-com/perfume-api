@@ -1,6 +1,6 @@
 // Compare perfumes side by side.
 // Usage: node contrast.mjs aventus-creed baccarat-rouge-540-maison-francis-kurkdjian
-import { get } from "./compendium.mjs";
+import { get } from "./perfume-api.mjs";
 
 const slugs = process.argv.slice(2);
 const perfumes = (slugs.length ? slugs : ["aventus-creed", "baccarat-rouge-540-maison-francis-kurkdjian"]).join(",");

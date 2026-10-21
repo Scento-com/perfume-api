@@ -1,5 +1,5 @@
 // Search perfumes, houses and raw materials.  Usage: node search.mjs oud
-import { get } from "./compendium.mjs";
+import { get } from "./perfume-api.mjs";
 
 const answer = await get("search", { q: process.argv[2] ?? "oud" });
 console.log(answer.lede);
